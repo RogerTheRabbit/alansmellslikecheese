@@ -3,12 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alan Smells Like Cheese :cheese_wedge:</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffd54f 0%, #ffecb3 100%);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #f57c00;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            margin: 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .cheese-emoji {
+            font-size: clamp(3rem, 10vw, 5rem);
+            animation: rotate 4s linear infinite;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: #e65100;
+            margin: 15px 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        .cheese-facts {
+            background: rgba(255,255,255,0.8);
+            padding: 15px;
+            border-radius: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cheese-facts h2 {
+            color: #ff6f00;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin: 15px 0 10px 0;
+        }
+
+        .cheese-facts ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .cheese-facts li {
+            padding: 8px;
+            margin: 5px 0;
+            background: #fff3e0;
+            border-radius: 10px;
+            position: relative;
+            padding-left: 35px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .cheese-facts li:before {
+            content: ":cheese_wedge:";
+            position: absolute;
+            left: 8px;
+            font-size: 1.2rem;
+        }
+
+        .floating-cheese {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatAround 15s infinite linear;
+            opacity: 0.7;
+        }
+
+        .cheese1 { top: 10%; left: -50px; animation-delay: 0s; }
+        .cheese2 { top: 30%; left: -50px; animation-delay: 3s; }
+        .cheese3 { top: 50%; left: -50px; animation-delay: 6s; }
+        .cheese4 { top: 70%; left: -50px; animation-delay: 9s; }
+        .cheese5 { top: 90%; left: -50px; animation-delay: 12s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatAround {
+            from { transform: translateX(0) rotate(0deg); }
+            to { transform: translateX(calc(100vw + 100px)) rotate(360deg); }
+        }
+
+        .disclaimer {
+            position: fixed;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
 </head>
-<body style="background-color: black; color: white">
-    <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
-        <div >
-            🧀🧀🧀 ALAN SMELLS LIKE CHEESE 🧀🧀🧀
+<body>
+    <div class="floating-cheese cheese1">:cheese_wedge:</div>
+    <div class="floating-cheese cheese2">:cheese_wedge:</div>
+    <div class="floating-cheese cheese3">:cheese_wedge:</div>
+    <div class="floating-cheese cheese4">:cheese_wedge:</div>
+    <div class="floating-cheese cheese5">:cheese_wedge:</div>
+
+    <div class="container">
+        <div class="cheese-emoji">:cheese_wedge:</div>
+        <h1>ALAN SMELLS LIKE CHEESE!</h1>
+        <div class="cheese-emoji">:cheese_wedge:</div>
+
+        <p class="subtitle">A Scientific Investigation into Alan's Aromatic Aura</p>
+
+        <div class="cheese-facts">
+            <h2>Top 5 Cheeses Alan Might Smell Like:</h2>
+            <ul>
+                <li>Aged Cheddar - Sharp, tangy, and unforgettable</li>
+                <li>Blue Cheese - Bold, distinctive, and slightly funky</li>
+                <li>Limburger - Notorious for its powerful aroma</li>
+                <li>Camembert - Creamy with a hint of earthiness</li>
+                <li>Mystery Cheese - Scientists are still investigating</li>
+            </ul>
+
+            <h2>Fun Facts:</h2>
+            <ul>
+                <li>Alan's cheese aroma has been detected from up to 50 feet away</li>
+                <li>Mice follow Alan around hoping for a snack</li>
+                <li>Wine sommeliers ask Alan for pairing recommendations</li>
+                <li>Alan single-handedly supports the local cheese industry</li>
+                <li>His cologne? Eau de Fromage</li>
+            </ul>
         </div>
     </div>
 </body>
